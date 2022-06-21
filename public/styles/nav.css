@@ -34,18 +34,16 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #ffd0e2;
-  opacity: 0.8;
-  background-image: linear-gradient(#fcf0af 2px, transparent 2px),
-    linear-gradient(90deg, #fcf0af 2px, transparent 2px),
-    linear-gradient(#fcf0af 1px, transparent 1px),
-    linear-gradient(90deg, #fcf0af 1px, #ffd0e2 1px);
-  background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
-  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+  /* Gradient 3 colors Style */
+  background-image: linear-gradient(
+    135deg,
+    rgba(246, 200, 218, 1) 0%,
+    rgba(252, 240, 175, 1) 50%,
+    rgba(89, 133, 202, 1) 100%
+  );
 }
 
-/* Paper Texture Backgroud*/
-/* 
+/*Paper Texture Backgroud*/ /* 
 background-color: #ffd0e2;
   opacity: 0.8;
   background-image: linear-gradient(#fcf0af 2px, transparent 2px),
@@ -56,8 +54,7 @@ background-color: #ffd0e2;
   background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
 */
 
-/* Gradient Background */
-/* 
+/* Gradient Background */ /* 
 background-image: linear-gradient(
     to bottom,
     #fcf0af,

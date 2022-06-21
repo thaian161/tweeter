@@ -4,22 +4,37 @@
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
+    <!-- Font Awesome Library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <!-- External CSS -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
       type="text/css"
     />
-    <!-- External Font -->
+    <!-- External Font from google font-->
+    <!-- SHADE/INLINE BUNGEE -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Source+Sans+Pro:ital,wght@1,300;1,600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Bungee+Shade&family=Source+Sans+Pro:wght@400;600&display=swap"
       rel="stylesheet"
     />
 
     <!-- App CSS -->
+
+    <!-- Style from layout.css -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+
+    <!-- Style from Nav.css -->
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -31,7 +46,13 @@
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span> TWEETER </span>
+      <header class="header">
+        <span>Tweeter</span>
+      </header>
+      <article class="writeATweet">
+        <span> <strong>Write</strong> a new tweet </span>
+        <i style="color: #f2c4d9" class="fa-solid fa-angles-down"></i>
+      </article>
     </nav>
 
     <!-- Page-specific (main) content here -->

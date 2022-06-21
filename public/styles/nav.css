@@ -23,9 +23,19 @@ nav {
   font-size: 30px;
 }
 
-.photo-name {
+.avatar-name {
+  height: 400px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: #eedce3;
+  opacity: 0.8;
+  background-image: linear-gradient(#faf6e1 2px, transparent 2px),
+    linear-gradient(90deg, #faf6e1 2px, transparent 2px),
+    linear-gradient(#faf6e1 1px, transparent 1px),
+    linear-gradient(90deg, #faf6e1 1px, #eedce3 1px);
+  background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
+  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
 }

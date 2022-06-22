@@ -17,7 +17,7 @@ nav {
 }
 
 /* only display FLEX to the PARENT component */
-.writeATweet {
+.writeATweetHeader {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,12 +25,34 @@ nav {
   font-size: 30px;
 }
 
+div.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+.profile-h2 {
+  margin-bottom: 0%;
+  font-weight: 900;
+}
+.profile-h4 {
+  margin-top: 0%;
+  font-size: medium;
+  display: flex;
+  /* align-self: flex-start; */
+}
+.text-outline {
+  color: #4879c8;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
+    1px 1px 0 white;
+}
+
 .photo-name {
   /* margin-top: 120px; */
   height: 400px;
   width: 100%;
-  color: #70a7ff;
-  text-shadow: 3px 3px #ffd0e2;
+  color: #5985ca;
+  text-shadow: 1px 1px black;
   font-size: large;
   display: flex;
   flex-direction: column;

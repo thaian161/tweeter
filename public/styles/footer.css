@@ -1,0 +1,7 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-shadow: 1px 1px #ffd0e2;
+  color: #5985ca;
+}

@@ -17,7 +17,7 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  /* use Z-INDEX to push element behind another element */
+  /* use Z-INDEX to overlay element on-top of another element */
   z-index: 2;
 }
 
@@ -35,6 +35,7 @@ div.profile-info {
   flex-direction: column;
   align-content: center;
   align-items: center;
+  margin-left: 12px;
 }
 .profile-h2 {
   margin-bottom: 0%;
@@ -63,10 +64,12 @@ div.profile-info {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  /* Background Texture */
   background-color: #ffd6e5;
-  opacity: 0.8;
-  background-image: linear-gradient(#fffa9d 2px, transparent 1px),
-    linear-gradient(to right, #fffa9d 2px, #ffd6e5 1px);
+  opacity: 0.9;
+  background-image: linear-gradient(#fffcbc 2px, transparent 1px),
+    linear-gradient(to right, #fffcbc 2px, #ffd6e5 1px);
   background-size: 20px 20px;
 }
 

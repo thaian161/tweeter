@@ -22,12 +22,13 @@ section.new-tweet {
 
 /* ---TWEET BUTTON STYLING--- */
 .tweet-button {
-  font-family: 'Bungee Inline', cursive;
-  font-size: 16px;
+  font-family: 'Bungee shade', cursive;
+  text-shadow: 2px 2px #ffd0e2;
+  font-size: 25px;
   letter-spacing: 2px;
   text-decoration: none;
   text-transform: uppercase;
-  color: #5985ca;
+  color: #4c72ad;
   cursor: pointer;
   border: 3px solid;
   padding: 0.25em 0.5em;

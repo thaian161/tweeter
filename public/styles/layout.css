@@ -15,7 +15,6 @@ html {
 /*
  * Global layout stuff
  */
-
 body {
   color: #545149;
   background-color: #f4f1ec;
@@ -28,7 +27,13 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
-/* Font for NAV
-nav {
-  font-family: 'Bungee Shade', cursive;
-} */
+/* we dont want to use just the tagname, instead we refer to the class name, even to be more specific, use the tag-name MAIN and the class CONTAINER at the same time */
+main.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  /* the first element is top-botom, the second is left/right, auto = automatically center */
+  margin: 1em auto;
+}

@@ -55,18 +55,31 @@
       </article>
     </nav>
 
-    <!-- DISPLAY PHOTO AND NAME -->
-    <header class="avatar-name">
+    <!-- DISPLAY PROFILE PHOTO AND NAME -->
+    <header class="photo-name">
       <div>
-        <img src="/images/profile-hex.png" />
+        <img src="/images/annBui.png" />
       </div>
       <br />
       <div>
-        <h2>Ann B</h2>
+        <h2>It's Ann</h2>
       </div>
     </header>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <!-- Page-specific MAIN content here -->
+    <main class="container">
+      <!-- FORM to submit tweet -->
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form action="/tweets/" method="POST">
+          <label for="tweet-text">What are you chirping about?</label>
+          <textarea name="text" id="tweet-text"></textarea>
+          <div>
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
+    </main>
   </body>
 </html>

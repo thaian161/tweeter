@@ -6,14 +6,13 @@ nav {
   height: 120px;
   width: 100%;
   padding: 1.5em;
-  /* position: fixed;
-  top: 0; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   align-content: center;
   font-size: 40px;
+  /*--- nav bar still stay on top when scroll down to bottom page---*/
   overflow: hidden;
   position: fixed;
   top: 0;

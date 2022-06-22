@@ -12,3 +12,10 @@
         </form>
       </section>
     </main> */
+
+section.new-tweet {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}

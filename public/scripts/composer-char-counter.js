@@ -33,6 +33,15 @@ $(document).ready(function () {
       .parent()
       .find('output')
       .text(140 - userInputLength);
+
+    //change color for the counter
+    //if userInputLength is below 0 -> add class to turn counter to red
+    if (counterValue.text() < 0) {
+      //console.log(counterValue.text());
+      counterValue.addClass('counter-red');
+    } else {
+      counterValue.removeClass('counter-red');
+    }
   });
 });
 

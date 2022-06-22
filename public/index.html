@@ -48,10 +48,14 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <!-- Function import from composer-char-counter.js -->
+    <script
+      type="text/javascript"
+      src="/scripts/composer-char-counter.js"
+    ></script>
   </head>
 
   <body>
-
     <!-- Top nav bar (fixed) -->
     <nav>
       <header>
@@ -80,7 +84,7 @@
       <section class="new-tweet">
         <!-- <h2>Compose Tweet</h2> -->
         <form class="tweet-form" action="/tweets/" method="POST">
-          <label class="tweet-text" for="tweet-text"
+          <label class="question-for-user-input" for="tweet-text"
             >What has been on your mind today?</label
           >
           <textarea name="text" id="tweet-text"></textarea>

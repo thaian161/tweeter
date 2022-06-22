@@ -110,3 +110,63 @@ div.tweet-button-and-counter {
   letter-spacing: 2px;
   color: #981c1c;
 }
+
+.tweet-button-shadow-dark {
+  align-items: center;
+  background-color: #5985ca;
+  border: 2px solid #09295a;
+  border-radius: 3px;
+  box-sizing: border-box;
+  color: #09295a;
+  cursor: pointer;
+  display: flex;
+  font-family: 'Bungee Inline';
+  text-shadow: 3px 3px black;
+  color: white;
+  font-size: 25px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.tweet-button-shadow-dark:after {
+  background-color: #09295a;
+  border-radius: 3px;
+  content: '';
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform 0.2s ease-out;
+  z-index: -1;
+}
+
+.tweet-button-shadow-dark:hover:after {
+  transform: translate(0, 0);
+}
+
+.tweet-button-shadow-dark:active {
+  background-color: #09295a;
+  outline: 0;
+}
+
+.tweet-button-shadow-dark:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .tweet-button-shadow-dark {
+    padding: 0 15px;
+  }
+}

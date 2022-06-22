@@ -14,10 +14,10 @@
     </main> */
 
 section.new-tweet {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+
+  /* This will make the width not grow larger than 800px
+  max-width: 800px; */
 }
 
 /* ---TWEET BUTTON STYLING--- */
@@ -91,4 +91,13 @@ section.new-tweet {
   font-weight: 600;
   font-size: 30px;
   color: black;
+}
+
+div.list-of-tweet {
+  width: 100%;
+}
+
+div.tweet-button-and-counter {
+  display: flex;
+  justify-content: space-between;
 }

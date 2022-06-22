@@ -17,6 +17,8 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
+  /* use Z-INDEX to push element behind another element */
+  z-index: 2;
 }
 
 /* only display FLEX to the PARENT component */

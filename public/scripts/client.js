@@ -28,24 +28,26 @@ const data = [
     created_at: 1461113959088,
   },
 ];
+$(document).ready(function () {
+  //---------Render Tweets to Main Page----
+  const renderTweets = function (tweets) {
+    // loops through tweets
+    for (const tweet of tweets) {
+      // calls createTweetElement for each tweet
 
-const renderTweets = function (tweets) {
-  // loops through tweets
-  for (const tweet of tweets) {
-    // calls createTweetElement for each tweet
+      //we have to create a constant to hold the value from createTweetElement
+      const $tweet = createTweetElement(tweet);
 
-    //we have to create a constant to hold the value from createTweetElement
-    const $tweet = createTweetElement(tweet);
+      // takes return value and appends it to the tweets container
+      //append it to the <div class ="list-of-tweet">
+      $('.list-of-tweet').append($tweet);
+    }
+  };
 
-    //append it to the <div class ="list-of-tweet">
-    $('.list-of-tweet').append($tweet);
-  }
-  // takes return value and appends it to the tweets container
-};
-
-const createTweetElement = function (tweet) {
-  console.log(tweet);
-  let $tweet = `<article class="tweet">
+  //---------MARK-UP Tweet-----------------
+  const createTweetElement = function (tweet) {
+    console.log(tweet);
+    let $tweet = `<article class="tweet">
   <div class="pading-tweet-box">
   <div>
   <header class="display-tweet-from-user">
@@ -76,7 +78,27 @@ const createTweetElement = function (tweet) {
 </div>
 </article>
 `;
-  return $tweet;
-};
+    return $tweet;
+  };
 
-renderTweets(data);
+  //----------CALL FUNC-------------
+  renderTweets(data);
+
+  //Target form with class of tweet-form
+
+  //add event listener on form that defined above
+  $('.tweet-form').on('submit', function (event) {
+    event.preventDefault();
+
+    //form is the one generate this event
+    //$ is a function
+    const data = $(this).serialize();
+    console.log(data);
+
+    //----Ajax POST request, path with the data we got from event listener on submit----
+    $.post('/tweets', data)
+    .then(() => {
+      console.log('It worked!');
+    });
+  });
+});

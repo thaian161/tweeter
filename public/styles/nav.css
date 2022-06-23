@@ -21,6 +21,22 @@ nav {
   z-index: 2;
 }
 
+i.boucing {
+  animation: bounce2 2.3s ease infinite forwards;
+}
+
+@keyframes bounce2 {
+  0% {
+    transform: translateY(-0.2rem);
+  }
+  50% {
+    transform: translateY(0.2rem);
+  }
+  100% {
+    transform: translateY(-0.2rem);
+  }
+}
+
 /* only display FLEX to the PARENT component */
 .writeATweetHeader {
   display: flex;

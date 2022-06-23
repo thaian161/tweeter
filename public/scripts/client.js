@@ -3,32 +3,24 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-// Fake data taken from initial-tweets.json
-const data = [
-  {
-    user: {
-      name: 'Newton',
-      avatars: 'https://i.imgur.com/73hZDYK.png',
-      handle: '@SirIsaac',
-    },
-    content: {
-      text: 'If I have seen further it is by standing on the shoulders of giants',
-    },
-    created_at: 1461116232227,
-  },
-  {
-    user: {
-      name: 'Descartes',
-      avatars: 'https://i.imgur.com/nlhLi3I.png',
-      handle: '@rd',
-    },
-    content: {
-      text: 'Je pense , donc je suis',
-    },
-    created_at: 1461113959088,
-  },
-];
+
 $(document).ready(function () {
+  //---------Ajax GET request, fetch data from http://localhost:8080/tweets---------------
+  const loadtweets = () => {
+    $.get('http://localhost:8080/tweets').then((data) => {
+      console.log(data);
+      renderTweets(data);
+    });
+  };
+
+  loadtweets();
+  //hide the error message when page is loaded
+  const formReset = function () {
+    $('#too-long-error').hide();
+    $('#empty-error').hide();
+  };
+  formReset();
+
   //---------Render Tweets to Main Page----
   const renderTweets = function (tweets) {
     // loops through tweets
@@ -67,7 +59,7 @@ $(document).ready(function () {
   </section>
   <br>
   <footer class="footer-tweet">
-    <div>${tweet.created_at}</div>
+    <div>${timeago.format(tweet.created_at)}</div>
     <div>
       <i class="fa-solid fa-comment-dots"></i>
       <i class="fa-solid fa-retweet"></i>
@@ -81,8 +73,9 @@ $(document).ready(function () {
     return $tweet;
   };
 
-  //----------CALL FUNC-------------
-  renderTweets(data);
+  //----------CALL RENDER FUNC-------------
+  //this is needed when we had the fake data objects
+  //renderTweets(data);
 
   //Target form with class of tweet-form
 
@@ -90,15 +83,36 @@ $(document).ready(function () {
   $('.tweet-form').on('submit', function (event) {
     event.preventDefault();
 
+    //hide the error from the start of form submition
+    formReset();
+
     //form is the one generate this event
     //$ is a function
-    const data = $(this).serialize();
+    //console.log(event.target.text.value); // this way does not sanitize the text, and might hack your site, database-query
+
     console.log(data);
 
+    //FORM VALIDATION
+    //user does not input anything
+    if (event.target.text.value === '') {
+      //display error
+      $('#empty-error').show();
+      return;
+    }
+    //number to number comparasing
+    if (event.target.text.value.length > 140) {
+      $('#too-long-error').show();
+      return;
+    }
+
+    //only need to serialize data when use POST request
+    const data = $(this).serialize();
     //----Ajax POST request, path with the data we got from event listener on submit----
-    $.post('/tweets', data)
-    .then(() => {
+    $.post('/tweets', data).then(() => {
       console.log('It worked!');
     });
   });
 });
+
+//Wrtie down your steps, step by step
+//if error then 1.1 1.2 1.3 => use the break the code in the console

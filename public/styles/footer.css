@@ -1,7 +1,38 @@
 .footer {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
   font-family: 'Source Sans Pro', sans-serif;
   text-shadow: 1px 1px white;
   color: #5985ca;
+  margin: 1em auto;
+  width: 90%;
+}
+
+/*------- BOTTOM BUTTON BOUNCE-------- */
+button.boucing-bottom {
+  animation: bounce2 1.9s ease infinite forwards;
+  text-shadow: 3px 3px #1f2e5c;
+  font-weight: 900px;
+}
+button.boucing-bottom {
+  background-color: #5985ca;
+  bottom: 2.5%;
+  left: 92.5%;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 2.5rem;
+  border: none;
+}
+@keyframes bounce2 {
+  0% {
+    transform: translateY(-0.2rem);
+  }
+  50% {
+    transform: translateY(0.2rem);
+  }
+  100% {
+    transform: translateY(-0.2rem);
+  }
 }

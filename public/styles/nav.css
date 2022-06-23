@@ -21,10 +21,10 @@ nav {
   z-index: 2;
 }
 
+/* ----TOP BUTTON BOUNCE---- */
 i.boucing {
-  animation: bounce2 2.3s ease infinite forwards;
+  animation: bounce2 1.9s ease infinite forwards;
 }
-
 @keyframes bounce2 {
   0% {
     transform: translateY(-0.2rem);
@@ -81,7 +81,7 @@ div.profile-info {
   align-items: center;
   justify-content: center;
 
-  /* Background Texture */
+  /* Photo and name display Background Texture */
   background-color: #ffd6e5;
   opacity: 0.9;
   background-image: linear-gradient(#fffcbc 2px, transparent 1px),

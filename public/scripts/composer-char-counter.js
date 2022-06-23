@@ -53,3 +53,5 @@ $(document).ready(function () {
 //total minus the amount of input that user input
 
 //turn red => look up the element .counter, addClass to make it red to the .counter
+
+

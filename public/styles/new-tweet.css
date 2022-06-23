@@ -1,18 +1,3 @@
-/* <main class="container">
-      <!-- FORM to submit tweet -->
-      <section class="new-tweet">
-        <h2>Compose Tweet</h2>
-        <form action="/tweets/" method="POST">
-          <label for="tweet-text">What are you chirping about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
-          <div>
-            <button class="tweet-button" type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </section>
-    </main> */
-
 section.new-tweet {
   width: 100%;
 
@@ -51,6 +36,62 @@ section.new-tweet {
   }
 }
 
+/* ----Tweet Button style 2----- */
+.tweet-button-shadow-dark {
+  align-items: center;
+  background-color: #5985ca;
+  border: 2px solid #09295a;
+  border-radius: 3px;
+  box-sizing: border-box;
+  color: #09295a;
+  cursor: pointer;
+  display: flex;
+  font-family: 'Bungee Inline';
+  text-shadow: 3px 3px black;
+  color: white;
+  font-size: 25px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.tweet-button-shadow-dark:after {
+  background-color: #09295a;
+  border-radius: 3px;
+  content: '';
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform 0.2s ease-out;
+  z-index: -1;
+}
+.tweet-button-shadow-dark:hover:after {
+  transform: translate(0, 0);
+}
+.tweet-button-shadow-dark:active {
+  background-color: #09295a;
+  outline: 0;
+}
+.tweet-button-shadow-dark:hover {
+  outline: 0;
+}
+@media (min-width: 768px) {
+  .tweet-button-shadow-dark {
+    padding: 0 15px;
+  }
+}
+
 /* ---DISPLAY COUNTER--- */
 .counter {
   display: flex;
@@ -62,6 +103,15 @@ section.new-tweet {
   font-weight: 500;
   letter-spacing: 2px;
   color: #1c4d98;
+}
+/* ---COUNTER-RED--- */
+.counter-red {
+  font-family: 'Bungee Inline';
+  text-shadow: 2px 2px #fbeea4;
+  font-size: 23px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: #981c1c;
 }
 
 /* ---TWEET-FORM STYLING--- */
@@ -102,71 +152,40 @@ div.tweet-button-and-counter {
   justify-content: space-between;
 }
 
-.counter-red {
-  font-family: 'Bungee Inline';
-  text-shadow: 2px 2px #fbeea4;
-  font-size: 23px;
-  font-weight: 500;
-  letter-spacing: 2px;
-  color: #981c1c;
+/* ----------------TWEET CONTAINER - where tweet by users got display -------------- */
+footer.footer-tweet {
+  display: flex;
+  justify-content: space-between;
 }
 
-.tweet-button-shadow-dark {
-  align-items: center;
-  background-color: #5985ca;
-  border: 2px solid #09295a;
-  border-radius: 3px;
-  box-sizing: border-box;
-  color: #09295a;
-  cursor: pointer;
+header.display-tweet-from-user {
   display: flex;
-  font-family: 'Bungee Inline';
-  text-shadow: 3px 3px black;
-  color: white;
-  font-size: 25px;
-  height: 48px;
-  justify-content: center;
-  line-height: 24px;
-  max-width: 100%;
-  padding: 0 25px;
+  justify-content: space-between;
+}
+
+article.tweet {
+  border: solid 5px;
+  margin-top: 40px;
+}
+
+article.tweet:hover {
+  cursor: pointer;
+  border: 5px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 3px 3px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px,
+    5px 5px 0px 0px;
   position: relative;
-  text-align: center;
-  text-decoration: none;
   user-select: none;
   -webkit-user-select: none;
-  touch-action: manipulation;
 }
 
-.tweet-button-shadow-dark:after {
-  background-color: #09295a;
-  border-radius: 3px;
-  content: '';
-  display: block;
-  height: 48px;
-  left: 0;
-  width: 100%;
-  position: absolute;
-  top: -2px;
-  transform: translate(8px, 8px);
-  transition: transform 0.2s ease-out;
-  z-index: -1;
+.tweet-label {
+  border-bottom: #5985ca solid 6px;
 }
-
-.tweet-button-shadow-dark:hover:after {
-  transform: translate(0, 0);
+i.fa-solid {
+  color: #5985ca;
 }
-
-.tweet-button-shadow-dark:active {
-  background-color: #09295a;
-  outline: 0;
-}
-
-.tweet-button-shadow-dark:hover {
-  outline: 0;
-}
-
-@media (min-width: 768px) {
-  .tweet-button-shadow-dark {
-    padding: 0 15px;
-  }
+i.fa-solid:hover {
+  cursor: pointer;
+  color: #d988a7;
 }

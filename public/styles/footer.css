@@ -5,7 +5,9 @@
   justify-content: space-between;
   font-family: 'Source Sans Pro', sans-serif;
   text-shadow: 1px 1px white;
-  color: #5985ca;
+  color: pink;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
+    1px 1px 0 white;
   margin: 1em auto;
   width: 90%;
 }

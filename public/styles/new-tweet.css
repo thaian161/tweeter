@@ -173,10 +173,10 @@ article.tweet {
 article.tweet:hover {
   font-family: 'Source Sans Pro', sans-serif;
   cursor: pointer;
-  border: 5px solid;
+  border: solid 5px;
   padding: 0.25em 0.5em;
-  box-shadow: 1px 1px 0px 0px, 3px 3px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px,
-    5px 5px 0px 0px;
+  box-shadow: #5985ca 3px 3px 0px 0px, #5985ca 5px 5px 0px 0px,
+    #5985ca 5px 5px 0px 0px, #5985ca 6px 6px 0px 0px, black 7px 7px 0px 0px;
   position: relative;
   user-select: none;
   -webkit-user-select: none;

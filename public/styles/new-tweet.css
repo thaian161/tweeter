@@ -205,3 +205,12 @@ div.pading-tweet-box {
   margin-left: 2%;
   margin-right: 2%;
 }
+
+div.mock-up-photo-username {
+  display: flex;
+  flex-direction: row;
+}
+h3.mock-up {
+  color: #a0b9e0;
+  text-shadow: 1px 1px #5985ca;
+}

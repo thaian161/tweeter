@@ -154,6 +154,7 @@ div.tweet-button-and-counter {
 
 /* ----------------TWEET CONTAINER - where tweet by users got display -------------- */
 footer.footer-tweet {
+  font-family: 'Source Sans Pro', sans-serif;
   display: flex;
   justify-content: space-between;
 }
@@ -164,11 +165,13 @@ header.display-tweet-from-user {
 }
 
 article.tweet {
+  font-family: 'Source Sans Pro', sans-serif;
   border: solid 5px;
   margin-top: 40px;
 }
 
 article.tweet:hover {
+  font-family: 'Source Sans Pro', sans-serif;
   cursor: pointer;
   border: 5px solid;
   padding: 0.25em 0.5em;
@@ -180,12 +183,25 @@ article.tweet:hover {
 }
 
 .tweet-label {
+  font-family: 'Source Sans Pro', sans-serif;
+  padding-top: 2%;
+  padding-bottom: 2%;
   border-bottom: #5985ca solid 6px;
 }
+
+/* ----HOVERING EFFECT FOR TWEET ICON----- */
 i.fa-solid {
   color: #5985ca;
 }
 i.fa-solid:hover {
   cursor: pointer;
   color: #d988a7;
+}
+
+div.pading-tweet-box {
+  font-family: 'Source Sans Pro', sans-serif;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
 }

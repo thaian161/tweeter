@@ -14,7 +14,7 @@
 
 /*------- BOTTOM BUTTON BOUNCE-------- */
 button.boucing-bottom {
-  animation: bounce2 1.9s ease infinite forwards;
+  animation: bounce2 1.5s ease infinite forwards;
   text-shadow: 3px 3px #1f2e5c;
   font-weight: 900px;
 }

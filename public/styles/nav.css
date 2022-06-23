@@ -23,7 +23,7 @@ nav {
 
 /* ----TOP BUTTON BOUNCE---- */
 i.boucing {
-  animation: bounce2 1.9s ease infinite forwards;
+  animation: bounce2 1.5s ease infinite forwards;
 }
 @keyframes bounce2 {
   0% {

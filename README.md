@@ -11,7 +11,7 @@ This is my third project at LHL after [Lotide](https://github.com/thaian161/loti
 
 ## Final Product
 
-### [👋 Watch Live Demo Here 👋]()
+### [👋 Watch Live Demo Here 👋](https://youtu.be/x8zQIm24-B8)
 
 #### _Desktop Page_
 

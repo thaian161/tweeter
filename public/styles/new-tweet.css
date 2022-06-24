@@ -72,11 +72,12 @@ section.new-tweet {
   color: #5d111a;
   cursor: pointer;
   display: flex;
-  font-family: 'Bungee Inline';
+  font-family: 'Source Sans Pro', sans-serif;
+
   text-shadow: 3px 3px black;
   color: white;
-  font-size: 35px;
-  height: 48px;
+  font-size: 25px;
+  height: 55px;
   justify-content: center;
   line-height: 24px;
   max-width: 100%;
@@ -184,7 +185,9 @@ article.tweet:hover {
   position: relative;
   user-select: none;
   -webkit-user-select: none;
+  background-color: #fbfaf2;
 }
+/*  */
 
 .tweet-label {
   font-family: 'Source Sans Pro', sans-serif;

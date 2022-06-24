@@ -43,3 +43,56 @@ main.container {
   /* the first element is top-botom, the second is left/right, auto = automatically center */
   margin: 1em auto;
 }
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  div.responsive {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  header.photo-name {
+    display: flex;
+    width: 25%;
+    margin: 4em 1em 3em 1em;
+  }
+
+  main.container {
+    display: flex;
+    width: 70%;
+    margin: 4em 2em 3em 1.5em;
+  }
+
+  footer.footer {
+    display: flex;
+    flex-direction: row;
+    align-content:space-around;
+  }
+}
+
+/* Tablet Styles */
+@media only screen and (max-width: 1024px) {
+  nav {
+    color: #5985ca;
+    height: 100px;
+    justify-content: center;
+
+    /* back-ground texture */
+    background-color: #f9b5cf;
+    opacity: 1;
+    background-image: linear-gradient(#fffcbc 2px, transparent 1px),
+      linear-gradient(to right, #fffcbc 2px, #f9b5cf 1px);
+    background-size: 20px 20px;
+  }
+
+  header.photo-name {
+    height: 350px;
+    opacity: 1;
+  }
+}

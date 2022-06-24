@@ -2,7 +2,7 @@ nav {
   font-family: 'Bungee Shade', cursive;
   background-color: #5985ca /* #4056a1*/;
   color: white;
-  text-shadow: 3px 3px #1f2e5c;
+  text-shadow: 5px 5px 5px #1f2e5c;
   height: 120px;
   width: 100%;
   padding: 1.5em;
@@ -67,9 +67,9 @@ div.profile-info {
 }
 .profile-name-display {
   color: black;
+  font-weight: 900;
   text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
     1px 1px 0 white;
-    
 }
 
 .photo-name {
@@ -85,10 +85,10 @@ div.profile-info {
   justify-content: center;
 
   /* Photo and name display Background Texture */
-  background-color: #ffd6e5;
+  background-color: #f9b5cf;
   opacity: 0.9;
   background-image: linear-gradient(#fffcbc 2px, transparent 1px),
-    linear-gradient(to right, #fffcbc 2px, #ffd6e5 1px);
+    linear-gradient(to right, #fffcbc 2px, #f9b5cf 1px);
   background-size: 20px 20px;
 }
 

@@ -4,10 +4,8 @@
   align-items: flex-end;
   justify-content: space-between;
   font-family: 'Source Sans Pro', sans-serif;
-  text-shadow: 1px 1px white;
-  color: pink;
-  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
-    1px 1px 0 white;
+  text-shadow: 5px 5px 5px #b1caef;
+  color: #5985ca;
   margin: 1em auto;
   width: 90%;
 }

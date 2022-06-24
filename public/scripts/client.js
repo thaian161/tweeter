@@ -12,8 +12,8 @@ $(document).ready(function () {
       renderTweets(data);
     });
   };
-
   loadtweets();
+
   //hide the error message when page is loaded
   const formReset = function () {
     $('#too-long-error').hide();
@@ -32,7 +32,8 @@ $(document).ready(function () {
 
       // takes return value and appends it to the tweets container
       //append it to the <div class ="list-of-tweet">
-      $('.list-of-tweet').append($tweet);
+      //use prepend to show tweet on the top of page
+      $('.list-of-tweet').prepend($tweet);
     }
   };
 
@@ -89,7 +90,7 @@ $(document).ready(function () {
     //form is the one generate this event
     //$ is a function
     //console.log(event.target.text.value); // this way does not sanitize the text, and might hack your site, database-query
-
+    const data = $(this).serialize();
     console.log(data);
 
     //FORM VALIDATION
@@ -106,11 +107,13 @@ $(document).ready(function () {
     }
 
     //only need to serialize data when use POST request
-    const data = $(this).serialize();
+
     //----Ajax POST request, path with the data we got from event listener on submit----
-    $.post('/tweets', data).then(() => {
-      console.log('It worked!');
-    });
+    $.post('/tweets', data)
+      //when post => load tweets to put the tweet on top of page
+      .then(() => {
+        loadtweets();
+      });
   });
 });
 

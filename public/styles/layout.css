@@ -80,9 +80,10 @@ main.container {
 /* ----TABLETS DISPLAY---- */
 @media only screen and (max-width: 1024px) {
   nav {
-    color: #5985ca;
+    /* color: #5985ca; */
     height: 100px;
     justify-content: center;
+    border-bottom: #ffc0d8;
 
     /* back-ground texture */
     background-color: #ffc0d8;

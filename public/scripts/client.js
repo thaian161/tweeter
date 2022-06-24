@@ -37,10 +37,18 @@ $(document).ready(function () {
     }
   };
 
+  //----Prevent Cross-Site Scripting Function------
+  const escape = function (str) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   //---------MARK-UP Tweet-----------------
   const createTweetElement = function (tweet) {
     console.log(tweet);
-    let $tweet = `<article class="tweet">
+    let $tweet = `
+    <article class="tweet">
   <div class="pading-tweet-box">
   <div>
   <header class="display-tweet-from-user">
@@ -55,7 +63,7 @@ $(document).ready(function () {
   <br>
   <section class="new-tweet">
     <form class="tweet-form" action="/tweets/" method="POST">
-      <label class="tweet-label"> <b>${tweet.content.text}</b></label>
+      <label class="tweet-label"> <b>${escape(tweet.content.text)}</b></label>
     </form>
   </section>
   <br>
@@ -71,6 +79,7 @@ $(document).ready(function () {
 </div>
 </article>
 `;
+
     return $tweet;
   };
 
@@ -113,6 +122,16 @@ $(document).ready(function () {
       //when post => load tweets to put the tweet on top of page
       .then(() => {
         loadtweets();
+      })
+
+      //clear form after user hit the tweet button
+      .then(() => {
+        $('input,textarea').val('');
+      })
+
+      //reset counter back to 140 after user hit the tweet button
+      .then(() => {
+        $('.counter').text(140);
       });
   });
 });

@@ -4,7 +4,7 @@ Tweeter is a simple, single-page Twitter clone.
 <br>
 
 > Tweeter allow users to post tweets within a 140-character limit. New tweets appear on the top of the page. Using **_AJAX_**, the app updates tweet pages asynchronously without reloading the whole page.
-> Tweeter Project uses [this repos](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) from LHL as template. To further develop the app, I used **_HTML, CSS, JS, jQuery, and AJAX in the front-end_**; **_Node and Express in the back-end._**
+> Tweeter Project uses [this repos](https://github.com/lighthouse-labs/tweeter) from LHL as template. To further develop the app, I used **_HTML, CSS, JS, jQuery, and AJAX in the front-end_**; **_Node and Express in the back-end._**
 > Additionally, Tweeter has a **_dynamic responsive design_** that is compatible with both **_desktop_** and **_tablet_** screens.
 
 This is my third project at LHL after [Lotide](https://github.com/thaian161/lotide) and [TinyApp](https://github.com/thaian161/tinyApp).

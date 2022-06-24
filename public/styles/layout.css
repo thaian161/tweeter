@@ -100,4 +100,7 @@ main.container {
   footer.footer {
     width: 97%;
   }
+  div #float-tablet-mode {
+    z-index: 5;
+  }
 }

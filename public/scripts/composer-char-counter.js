@@ -1,4 +1,4 @@
-//-Document.ready mean don't executive this code until the DOM is loaded in the browser. 
+//-Document.ready mean don't executive this code until the DOM is loaded in the browser.
 //-It is safer to always wrap the code in document.ready
 $(document).ready(function () {
   $('#tweet-text').on('input', function () {
@@ -11,7 +11,7 @@ $(document).ready(function () {
     //console.log(userInput);
     //console.log(userInputLength);
 
-    // Selects FORM the parent of the textarea. Then finds the OUTPUT of counter
+    // Selects FORM:the parent of the <textarea>. Then finds the OUTPUT of counter
     let counterValue = $(this)
       .parent()
       .find('output')
@@ -28,11 +28,9 @@ $(document).ready(function () {
   });
 });
 
-// -----STEP ON HOW TO IMPLENTATION ADD COUNTER-----------------------------------
+// --------------STEP ON HOW TO IMPLENTATION ADD COUNTER-----------------------------------
 //call the counter
 //.counter
 //use Jquery .text to set a new value of .counter
 //total minus the amount of input that user input
 //turn red => look up the element .counter, addClass to make it red to the .counter
-
-

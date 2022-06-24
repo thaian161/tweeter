@@ -6,19 +6,30 @@
       "handle": "@SirIsaac"
     },
     "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
+      "text": "If I've seen further than others, it is by standing upon the shoulders of giants."
     },
-    "created_at": 1655916956486
+    "created_at": 1655837983499
   },
   {
     "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
+      "name": "Jessie",
+      "avatars": "https://imgur.com/nlhLi3I.png",
+      "handle": "@Cor-5:7"
     },
     "content": {
-      "text": "Je pense , donc je suis"
+      "text": "For we live by faith, not by sight."
     },
-    "created_at": 1656003356486
+    "created_at": 1655924383499
+  },
+  {
+    "user": {
+      "name": "Solomon",
+      "avatars": "https://imgur.com/ilT4JDe.png",
+      "handle": "@Prov-19:20"
+    },
+    "content": {
+      "text": "Hear counsel and accept discipline; then you, too, will be counted among the wise."
+    },
+    "created_at": 1656010783499
   }
 ]

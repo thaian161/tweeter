@@ -5,7 +5,7 @@
  */
 
 $(document).ready(function () {
-  //---------Ajax GET request, fetch data from http://localhost:8080/tweets--------
+  //---------Ajax GET request---------
   const loadtweets = () => {
     $.get('http://localhost:8080/tweets').then((data) => {
       console.log(data);
@@ -14,19 +14,19 @@ $(document).ready(function () {
   };
   loadtweets();
 
-  //hide the error message when page is loaded
+  //Hide the error message when page is loaded
+  //Creat formReset function to avoid repeatitive
   const formReset = function () {
     $('#too-long-error').hide();
     $('#empty-error').hide();
   };
   formReset();
 
-  //---------Render Tweets to Main Page----
+  //---------RENDER TWEETS to Main Page------------
   const renderTweets = function (tweets) {
     // loops through tweets
     for (const tweet of tweets) {
-      // calls createTweetElement for each tweet
-
+      //calls createTweetElement for each tweet
       //we have to create a constant to hold the value from createTweetElement
       const $tweet = createTweetElement(tweet);
 
@@ -37,14 +37,14 @@ $(document).ready(function () {
     }
   };
 
-  //----Prevent Cross-Site Scripting Attack Function------
+  //----PREVENT Cross-Site Scripting ATTACK Function------
   const escape = function (str) {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
 
-  //---------MARK-UP Tweet-----------------
+  //-----------MARK-UP Tweet-----------------
   const createTweetElement = function (tweet) {
     console.log(tweet);
     let $tweet = `
@@ -53,7 +53,7 @@ $(document).ready(function () {
   <div>
   <header class="display-tweet-from-user">
     <div class="mock-up-photo-username">
-      <img src=${tweet.user.avatars} />
+      <img class="ava" src=${tweet.user.avatars} />
       <h2 class="profile-h2">${tweet.user.name}</h2>
     </div>
     <div>
@@ -89,23 +89,22 @@ $(document).ready(function () {
     //hide the error from the start of form submition
     formReset();
 
+    //Use serialize() to sanitizing the data
     const data = $(this).serialize();
     console.log(data);
 
-    //FORM VALIDATION
+    //---------FORM VALIDATION---------------------
     //user does not input anything
     if (event.target.text.value === '') {
       //display error
       $('#empty-error').show();
       return;
     }
-    //number to number comparasing
+    //user input more than 140 characters
     if (event.target.text.value.length > 140) {
       $('#too-long-error').show();
       return;
     }
-
-    //only need to serialize data when use POST request
 
     //----Ajax POST request, path with the data we got from event listener on submit----
     $.post('/tweets', data)
@@ -131,5 +130,8 @@ $(document).ready(function () {
   });
 });
 
+//-------------NOTES TO ME----------------------
 //Wrtie down your steps, step by step
-//if error then 1.1 1.2 1.3 => use the break the code in the console
+//Use DevTool break-point to debug
+//If error then break step into moe steps 1.1--- 1.2--- 1.3--- => console.log in DevTool
+//Only need to serialize data when use POST request

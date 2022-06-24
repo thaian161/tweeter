@@ -5,7 +5,7 @@
  */
 
 $(document).ready(function () {
-  //---------Ajax GET request, fetch data from http://localhost:8080/tweets---------------
+  //---------Ajax GET request, fetch data from http://localhost:8080/tweets--------
   const loadtweets = () => {
     $.get('http://localhost:8080/tweets').then((data) => {
       console.log(data);
@@ -37,7 +37,7 @@ $(document).ready(function () {
     }
   };
 
-  //----Prevent Cross-Site Scripting Function------
+  //----Prevent Cross-Site Scripting Attack Function------
   const escape = function (str) {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
@@ -79,15 +79,8 @@ $(document).ready(function () {
 </div>
 </article>
 `;
-
     return $tweet;
   };
-
-  //----------CALL RENDER FUNC-------------
-  //this is needed when we had the fake data objects
-  //renderTweets(data);
-
-  //Target form with class of tweet-form
 
   //add event listener on form that defined above
   $('.tweet-form').on('submit', function (event) {
@@ -96,9 +89,6 @@ $(document).ready(function () {
     //hide the error from the start of form submition
     formReset();
 
-    //form is the one generate this event
-    //$ is a function
-    //console.log(event.target.text.value); // this way does not sanitize the text, and might hack your site, database-query
     const data = $(this).serialize();
     console.log(data);
 
@@ -133,6 +123,11 @@ $(document).ready(function () {
       .then(() => {
         $('.counter').text(140);
       });
+  });
+
+  //----SCROLL UP BUTTON----
+  $('#scroll-up').click(function () {
+    $('html, body').animate({ scrollTop: 0 }, 1000);
   });
 });
 

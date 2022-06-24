@@ -4,8 +4,12 @@
     <!-- Meta Information -->
 
     <!-- /Disable viewport zooming -->
-    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
     <title>Tweeter - Home Page</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
 
     <!-- Font Awesome Library -->
     <link
@@ -56,7 +60,12 @@
       src="/scripts/composer-char-counter.js"
     ></script>
     <!-- TIMEAGO library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+      integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </head>
 
   <body>
@@ -67,92 +76,74 @@
       </header>
       <article class="writeATweetHeader">
         <span> <strong>Write</strong> a new tweet </span>
-        <i style="color:white" class="fa-solid fa-angles-down boucing"></i>
+        <i style="color: white" class="fa-solid fa-angles-down boucing"></i>
       </article>
     </nav>
 
     <!-- DISPLAY PROFILE PHOTO AND NAME -->
     <div class="responsive">
-    <header class="photo-name">
-      <div>
-        <img  src="/images/annBui.png" />
-      </div>
-      <div class="profile-info profile-name-display">
-        <h2 class="profile-h2">Ann Bui🌻</h2>
-        <h4 class="profile-h4">@thaian161</h4>
-      </div>
-    </header>
-
-    <!-- Page-specific MAIN content here -->
-    <main class="container">
-      <!-- FORM to submit tweet -->
-      <section class="new-tweet">
-        <!-- <h2>Compose Tweet</h2> -->
-        <form class="tweet-form" action="/tweets/" method="POST">
-          <label class="question-for-user-input" for="tweet-text"
-            >What has been on your mind today?</label
-          >
-          <textarea name="text" id="tweet-text"></textarea>
-          <div class="tweet-button-and-counter">
-            <button
-              class="tweet-button-shadow-dark"
-              role="button"
-              type="submit"
-            >
-              Tweet
-            </button>
-          
-            <p class="error-button" id="too-long-error"> Bruhhh, Limit Your Tweet To 140 Characters Only </p>
-            <p class="error-button" id="empty-error"> <b>C'mon, Your Mind Can Be Empty But Your Tweet Cannot, Write SomeThing!</b></p>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </section>
-      <div class="list-of-tweet">
-        <!-- TWEET CONTAINER - where tweet by users got display -->
-        <article class="tweet">
-          <div class="pading-tweet-box">
-          <div>
-          <header class="display-tweet-from-user">
-            <div class="mock-up-photo-username">
-              <img src="/images/bible.png" /> 
-              <h2 class="profile-h2">Joshua</h2>
-            </div>
-            <div>
-              <h3 class="profile-h4 mock-up">@Joshua-1:9</h3>
-            </div>
-          </header>
-          <br>
-          <section class="new-tweet">
-            <form class="tweet-form" action="/tweets/" method="POST">
-              <label class="tweet-label"> <b>Be strong and courageous. Do not be frightened, and do not be dismayed, for the Lord your God is with you wherever you go.</b></label>
-            </form>
-          </section>
-          <br>
-          <footer class="footer-tweet">
-            <div>A moment ago</div>
-            <div>
-              <i class="fa-solid fa-comment-dots icon"></i>
-              <i class="fa-solid fa-retweet icon"></i>
-              <i class="fa-solid fa-heart icon"></i>
-              <i class="fa-solid fa-share-nodes icon"></i>
-            </div>
-          </footer>
+      <header class="photo-name">
+        <div>
+          <img src="/images/annBui.png" />
         </div>
-        </article>
-      </div>
-     
-    </main>
-  </div>
-  
+        <div class="profile-info profile-name-display">
+          <h2 class="profile-h2">Ann Bui🌻</h2>
+          <h4 class="profile-h4">@thaian161</h4>
+        </div>
+      </header>
+
+      <!-- Page-specific MAIN content here -->
+      <main class="container">
+        <!-- FORM to submit tweet -->
+        <section class="new-tweet">
+          <!-- <h2>Compose Tweet</h2> -->
+          <form class="tweet-form" action="/tweets/" method="POST">
+            <label class="question-for-user-input" for="tweet-text"
+              >What has been on your mind today?</label
+            >
+            <textarea name="text" id="tweet-text"></textarea>
+            <div class="tweet-button-and-counter">
+              <button
+                class="tweet-button-shadow-dark"
+                role="button"
+                type="submit"
+              >
+                Tweet
+              </button>
+              <!-- ERROR DISPLAY -->
+              <p class="error-button" id="too-long-error">
+                Bruhhh, Limit Your Tweet To 140 Characters Only
+              </p>
+              <p class="error-button" id="empty-error">
+                <b
+                  >C'mon, Your Mind Can Be Empty But Your Tweet Cannot, Write
+                  SomeThing!</b
+                >
+              </p>
+              <output name="counter" class="counter" for="tweet-text"
+                >140</output
+              >
+            </div>
+          </form>
+        </section>
+
+        <!-- TWEET CONTAINER - where tweet by users got display, dynamic mark-up in client.js-->
+        <div class="list-of-tweet"></div>
+      </main>
+    </div>
+
     <!-- FOOTER-->
     <footer class="footer">
       <div class="footer">
         <p>© 2022 | <strong>TWEETER</strong> by Ann Bui at LHL</p>
         <button class="boucing-bottom">
-        <i id="scroll-up" style="color: white" class="fa-solid fa-angles-up"></i></button>
+          <i
+            id="scroll-up"
+            style="color: white"
+            class="fa-solid fa-angles-up"
+          ></i>
+        </button>
       </div>
     </footer>
- 
   </body>
 </html>

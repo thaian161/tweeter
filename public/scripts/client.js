@@ -70,10 +70,10 @@ $(document).ready(function () {
   <footer class="footer-tweet">
     <div>${timeago.format(tweet.created_at)}</div>
     <div>
-      <i class="fa-solid fa-comment-dots"></i>
-      <i class="fa-solid fa-retweet"></i>
-      <i class="fa-solid fa-heart"></i>
-      <i class="fa-solid fa-share-nodes"></i>
+      <i class="fa-solid fa-comment-dots icon"></i>
+      <i class="fa-solid fa-retweet icon"></i>
+      <i class="fa-solid fa-heart icon"></i>
+      <i class="fa-solid fa-share-nodes icon"></i>
     </div>
   </footer>
 </div>

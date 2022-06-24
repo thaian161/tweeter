@@ -2,7 +2,9 @@
 <html lang="en">
   <head>
     <!-- Meta Information -->
-    <meta content="width=device-width, initial-scale=1" />
+
+    <!-- /Disable viewport zooming -->
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
     <title>Tweeter - Home Page</title>
 
     <!-- Font Awesome Library -->
@@ -99,8 +101,8 @@
               Tweet
             </button>
           
-            <p class="error-button" id="too-long-error"> Bruh, Limit Your Tweet To 140 Characters Only Please</p>
-            <p class="error-button" id="empty-error"> C'Mon Your Mind Can Be Empty But Your Tweet Cannot, Write SomeThing </p>
+            <p class="error-button" id="too-long-error"> Bruhhh, Limit Your Tweet To 140 Characters Only Please</p>
+            <p class="error-button" id="empty-error"> C'Mon Your Mind Can Be Empty But Your Tweet Cannot, Write SomeThing!!! </p>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
@@ -112,7 +114,7 @@
           <div>
           <header class="display-tweet-from-user">
             <div class="mock-up-photo-username">
-              <img src="/images/bible.png" />
+              <img src="/images/bible.png" /> 
               <h2 class="profile-h2">Joshua</h2>
             </div>
             <div>
@@ -129,10 +131,10 @@
           <footer class="footer-tweet">
             <div>A moment ago</div>
             <div>
-              <i class="fa-solid fa-comment-dots"></i>
-              <i class="fa-solid fa-retweet"></i>
-              <i class="fa-solid fa-heart"></i>
-              <i class="fa-solid fa-share-nodes"></i>
+              <i class="fa-solid fa-comment-dots icon"></i>
+              <i class="fa-solid fa-retweet icon"></i>
+              <i class="fa-solid fa-heart icon"></i>
+              <i class="fa-solid fa-share-nodes icon"></i>
             </div>
           </footer>
         </div>

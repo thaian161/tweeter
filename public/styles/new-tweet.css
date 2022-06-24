@@ -153,6 +153,7 @@ div.list-of-tweet {
 div.tweet-button-and-counter {
   display: flex;
   justify-content: space-between;
+  margin-top: 0.5rem;
 }
 
 /* ----------------TWEET CONTAINER - where tweet by users got display -------------- */
@@ -216,4 +217,8 @@ div.mock-up-photo-username {
 h3.mock-up {
   color: #a0b9e0;
   text-shadow: 1px 1px #5985ca;
+}
+
+i.icon {
+  margin-left: 0.5rem;
 }

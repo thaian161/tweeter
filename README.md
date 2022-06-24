@@ -3,9 +3,9 @@
 Tweeter is a simple, single-page Twitter clone.
 <br>
 
-> Tweeter allow users to post tweets within a 140-character limit. New tweets appear on the top of the page. Using AJAX, the app updates tweet pages asynchronously without reloading the whole page.
-> Tweeter Project uses [this repos](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) from LHL as template. To further develop the app, I used HTML, CSS, JS, jQuery, and AJAX in the front-end; Node and Express in the back-end.
-> Additionally, Tweeter has a dynamic responsive design that is compatible with both desktop and tablet screens.
+> Tweeter allow users to post tweets within a 140-character limit. New tweets appear on the top of the page. Using **_AJAX_**, the app updates tweet pages asynchronously without reloading the whole page.
+> Tweeter Project uses [this repos](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) from LHL as template. To further develop the app, I used **_HTML, CSS, JS, jQuery, and AJAX in the front-end_**; **_Node and Express in the back-end._**
+> Additionally, Tweeter has a **_dynamic responsive design_** that is compatible with both **_desktop_** and **_tablet_** screens.
 
 This is my third project at LHL after [Lotide](https://github.com/thaian161/lotide) and [TinyApp](https://github.com/thaian161/tinyApp).
 
@@ -13,37 +13,25 @@ This is my third project at LHL after [Lotide](https://github.com/thaian161/loti
 
 ### [👋 Watch Live Demo Here 👋]()
 
-#### _Welcome to TinyApp, Log-in or Register To Shorten Your URLs Page_
+#### _Desktop Page_
 
-!["Welcome to TinyApp, Log-in or Register To Shorten Your URLs "]()
+!["Desktop Page"](https://github.com/thaian161/tweeter/blob/master/public/images/desktop-page.png)
 
-#### _Log-In Page_
+#### _Error Display Page_
 
-!["Log-In Page"]()
+!["Error"](https://github.com/thaian161/tweeter/blob/master/public/images/display-error.png)
 
-#### _Register Page_
+#### _Desktop bottom of page_
 
-!["Register Page"]()
+!["Desktop end page"](https://github.com/thaian161/tweeter/blob/master/public/images/desktop-end-page.png)
 
-#### _Create Your URLs Page_
+#### _Ipad Page_
 
-!["Create Your URLs Page"]()
+!["Ipad Page"](https://github.com/thaian161/tweeter/blob/master/public/images/ipad-views.png)
 
-#### _Edit Your URLs Page_
+#### _Ipad bottom of page_
 
-!["Edit Your URLs Page"]()
-
-#### _My URLs Page_
-
-!["My Urls Page"]()
-
-#### _User Does Not Exist Page_
-
-!["User Doesn't Exist Page"]()
-
-#### _User Has Been Registered Page_
-
-!["User Has Been Registered Page"]()
+!["Ipad end page"](https://github.com/thaian161/tweeter/blob/master/public/images/ipad-end-views.png)
 
 ## Dependencies
 

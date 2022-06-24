@@ -9,6 +9,8 @@ Tweeter is a simple, single-page Twitter clone.
 
 This is my third project at LHL after [Lotide](https://github.com/thaian161/lotide) and [TinyApp](https://github.com/thaian161/tinyApp).
 
+Avatar Icon re-designed by my little sister [@ThyAn BuiLe](https://www.linkedin.com/in/anbui-designer/)
+
 ## Final Product
 
 ### [👋 Watch Live Demo Here 👋](https://youtu.be/x8zQIm24-B8)

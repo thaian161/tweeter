@@ -15,7 +15,7 @@ Avatar Icon re-designed by my little sister [@ThyAn BuiLe](https://www.linkedin.
 
 ### [👋 Watch Live Demo Here 👋](https://youtu.be/x8zQIm24-B8)
 
-#### _Desktop Page_
+#### _Desktop Landing Page_
 
 !["Desktop Page"](https://github.com/thaian161/tweeter/blob/master/public/images/desktop-page.png)
 
